@@ -1,7 +1,9 @@
+/* BASE STYLES */
 :root {
 --clr-primary: #FFF;
 --clr-accent: #1E6091;
 --clr-footer: #414345;
+--clr-dark: #000;
 }
 
 * {
@@ -19,12 +21,11 @@ body {
 }
 
 .container {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 img {
   max-width: 100%;
-  display: block;
 }
 
 h3 {
@@ -35,47 +36,140 @@ p {
   font-weight: 100;
 }
 
+hr {
+ margin-top: 5rem !important;
+ 
+}
+
 .fas, .far {
   color: var(--clr-accent);
-}
-.page-border {  
-  width: 100vw;
-  height: 1.5vw;
-  background-color: var(--clr-accent);
-  
+  display: flex;
+  margin-left: 3rem;
 }
 
-nav {
-  top: 1.5rem;
-  left: 0;
-  background-color: var(--clr-primary);
-  width: 100vw;
+
+
+/* NAVIGATION */
+
+.top-border {
+  background-color: #fff;
+}
+
+.toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 95px;
+  background: var(--clr-accent) url(../img/menu.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: var(--clr-accent) url(../img/close.png);
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  top: 0;
+  position: fixed;
+ display: flex;
+ justify-content: center;
+ background-color: #fff;
+ width: 100vw;
+ z-index: 999;
+}
+
+.logo img {
+  margin-top: 0.5rem;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 15;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
   text-align: center;
 }
-nav ul li, nav a {
-  list-style: none;
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
   text-decoration: none;
-  color: #333;
-  margin: 0.3rem 0;
-}
-nav li:hover {
-  background-color: var(--clr-accent);
-  color: var(--clr-primary);
-
-}
-nav img {
-  margin-top: 1rem;
+  font-weight: 300;
 }
 
+.navigation ul li a:hover {
+  color: var(--clr-accent);
+}
 
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .social-bar a {
+  display: inline-block;
+  transform: scale(0.5);
+}
+
+.navigation .email-icon {
+  position: absolute;
+  bottom: 20px;
+  transform: scale(0.5);
+}
+
+/* MEDIA QUERIES */
+/* DESKTOP SIZE & TABLET SIZE */
+
+@media(min-width: 40em) {
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+}
+
+
+/* HEADER SECTION */
 
 header {
   position: relative;
   text-align: center;
   color: white;
+  margin-top: 5rem;
+
 }
 
 header .office-img {
@@ -94,21 +188,28 @@ header .office-img {
 .overlay button {
   color: #fff;
   background-color: transparent;
-  outline: #fff;
   padding: 0.8rem;
+  border: 1px solid var(--clr-primary);
+  outline: none;
 }
 .overlay button:hover {
 background-color: rgba(0, 0, 0, 0.3);
 color: #fff;
 }
+.overlay button:focus, overlay button:active{
+   outline: none !important;
+   box-shadow: none;
+}
+
+/* SERVICES SECTION */
 
 .services .grid {
-  display: grid;
+ display: grid;
  grid-template-columns: repeat(2, 1fr);
  grid-template-rows: repeat(7, 1fr);
  gap: 1rem;
 margin: 0 auto;
-
+margin-top: 4rem;
 }
 
 .services h3 + p {
@@ -120,26 +221,61 @@ margin: 0 auto;
   margin-top: 1rem;
 }
 
-.intermediaries {
-  border-top: 0.2rem lightgray solid;
-  border-bottom: 0.2rem lightgray solid;
-  padding: 1rem;
+/* INTERMEDIARIES SECTION */
 
+.intermediaries h3 + p {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.intermediaries ul {
+ margin-top: 1.5rem;
 }
 
 .intermediaries ul li {
+  margin-top: 1rem;
   font-weight: 100;
   list-style-type: circle;
 }
 
 
+/* TESTIMONIALS SECTION */
+
+.split h3 {
+ text-align: left;
+}
+.about-director h3 {
+ margin-top: 2rem;
+}
+
+.about-director img {
+width: 60%;
+border-radius: 50%;
+scale: 0.6;
+float: left;
+
+}
+
+.about-director p {
+  padding: 0 2rem;
+}
+
+
+.testimonial-section {
+  margin-top: 8rem;
+}
+
+.testimonial-section h3 {
+  text-align: left;
+}
+
 .testimonial {
+  margin-top: 2rem;
 	background-color: #fff;
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 	overflow: hidden;
 	max-width: 100%;
-	width: 400px;
 }
 
 .testimonial-body {
@@ -178,6 +314,7 @@ margin: 0 auto;
 	margin: 10px 0;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+  text-align: center;
 }
 
 .testimonial-footer h4 {
@@ -186,16 +323,99 @@ margin: 0 auto;
 	letter-spacing: 1px;
 }
 
-.director-img {
-border-radius: 1rem;
-scale: 0.6;
-float: left;
-
+.signature {
+min-width: 100%;
 }
 
-@media(min-width: 40em) {
-.container {
-  margin-inline: auto;
-  width: min(90%, 70.5rem);
+
+/* CONTACT US SECTION */
+
+sub-heading {
+  margin-top: 1.5rem;
 }
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.77rem;
 }
+
+input {
+  background-color: #f7f8fa;
+  border: none;
+  padding: 0.5rem;
+}
+textarea {
+  background-color: #f7f8fa;
+  border: none;
+  padding: 0.5rem;
+}
+
+form button { 
+  width: 35%;
+  padding: 0.7rem;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  border: none;
+  transition: ease-in 0.30s;
+}
+form button:hover { 
+background-color: #333;
+}
+
+
+
+.contact-info h3 {
+  margin: 2.5rem 0;
+}
+
+.contact-info .fas {
+  color: var(--clr-primary);
+  margin: 0 0.5rem;
+  
+}
+
+.contact-info p {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem;
+  text-decoration: none;
+}
+
+.contact-info a {
+  color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: var(--clr-primary);
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: var(--clr-footer);
+  margin-top: 13rem;
+  width: 100vw;
+  height: 40vh;
+  bottom: 0;
+  color: var(--clr-primary);
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+footer .fab {
+  color: grey;
+}
+
+

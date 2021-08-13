@@ -19,31 +19,47 @@
 
 <body>
 
-  <div class="page-border">
+
+
+
+  <div class="logo">
+    <img src="/img/logo2.png" alt="">
+    <div class="toggle"></div>
+    <div class="navigation">
+      <ul>
+        <li> <a href="">
+        <li>Welcome</li>
+        </a></li>
+        <li id="service-link">
+          <a href="#service-section">
+        <li>Our Services</li>
+        </a></li>
+        <li> <a href="">
+        <li>About Us</li>
+        </a></li>
+        <li> <a href="">
+        <li>Testimonials</li>
+        </a></li>
+        <li> <a href="">
+        <li>Contact Us</li>
+        </a></li>
+      </ul>
+      <div class="social-bar">
+        <ul>
+          <li><a href="https://facebook.com"><img src="/img/fac" alt="" target="_blank"></a></li>
+          <li><a href="https://twitter.com"><img src="/img/twitter.png" alt="" target="_blank"></a></li>
+          <li><a href="https://instagram.com"><img src="/img/instagram.png" alt="" target="_blank"></a></li>
+        </ul>
+        <a href="mailto:you@email.com" class="email-icon"><img src="/img/email.png" alt=""></a>
+      </div>
+    </div>
 
   </div>
 
-  <nav id="nav">
-    <img src="/img/logo2.png" alt="">
-    <a href="">
-      <li>Welcome</li>
-    </a>
-    <a href="">
-      <li>Our Services</li>
-    </a>
-    <a href="">
-      <li>About Us</li>
-    </a>
-    <a href="">
-      <li>Testimonials</li>
-    </a>
-    <a href="">
-      <li>Contact Us</li>
-    </a>
-    </ul>
-  </nav>
 
   <header>
+    <div class="top-border">
+    </div>
     <img src="/img/office.jpg" class="office-img" alt="">
     <div class="container">
       <div class="overlay">
@@ -53,14 +69,14 @@
           and
           pre- and
           post-loss.</p>
-        <button type="button" class="btn btn-light">Learn More</button>
+        <button type="button" class="btn">Learn More</button>
       </div>
     </div>
   </header>
 
   <div class="container">
     <section class="services">
-      <h3>Services to Underwriters and Intermediaries</h3>
+      <h3 id="service-section">Services to Underwriters and Intermediaries</h3>
       <p>We can provide tailored solutions to insurers, brokers and insured entities on an ad-hoc or ongoing basis.</p>
       <div class="grid">
         <div class="item-1"><i class="fas fa-signal fa-2x"></i> <br>
@@ -117,7 +133,8 @@
 
   <div class="container">
     <section class="intermediaries">
-      <h3>For Intermediaries</h3>
+      <hr>
+      <h3 id="about-us">For Intermediaries</h3>
       <p>A fresh take on Claim Preparation</p>
       <ul>
         <li>I am a professional Claims Manager and thus have first-hand insight in managing large and complex ISR and
@@ -132,6 +149,7 @@
           other
           service providers.</li>
       </ul>
+      <hr>
     </section>
 
     <section class="split">
@@ -163,49 +181,56 @@
           the Institute of Actuaries.
 
         </p>
-
-
-        <img src="/img/signature.png" alt="">
+        <img src="/img/signature.png" class="signature" alt="">
       </div>
 
-      <div class="testimonial">
-        <div class="testimonial-body">
-          <p>
-            It's a pleasure working with David and his team at Claims Management AU to build upon the success of the
-            existing Delta
-            platform and offer ASX customers a single solution to give them all the flexibility they need to manage and
-            process
-            claims.
-          </p>
-          <i class="fas fa-quote-right"></i>
-        </div>
-        <div class="testimonial-footer">
-          <img src="/img/alexsnow.jpg" alt="">
-          <h3>Alex Snow</h3>
-          <h4>Director - Delta</h4>
+
+      <div class="testimonial-section">
+        <br>
+        <h3 id="testimonials-id">Testimonials</h3>
+        <div class="testimonial">
+          <div class="testimonial-body">
+
+            <p>
+              It's a pleasure working with David and his team at Claims Management AU to build upon the success of the
+              existing Delta
+              platform and offer ASX customers a single solution to give them all the flexibility they need to manage
+              and
+              process
+              claims.
+            </p>
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <div class="testimonial-footer">
+            <img src="/img/alexsnow.jpg" alt="">
+            <h3>Alex Snow</h3>
+            <h4>Director - Delta</h4>
+          </div>
         </div>
       </div>
     </section>
   </div>
 
+  <hr>
+
   <div class="container">
     <section class="split">
       <div>
-        <h3>Contact Us Today</h3>
-        <p>Provide your details below to contact us today</p>
+        <h3 id="contact-us">Contact Us Today</h3>
+        <p class="sub-heading">Provide your details below to contact us today</p>
         <form>
-          <input type="text" placeholder="Name">
-          <input type="number" placeholder="Phone">
-          <input type="email" placeholder="Email Address">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message...">
+          <input class="mt-3" type="text" placeholder="Name">
+          <input class="mt-3" type="text" placeholder="Phone">
+          <input type="email" placeholder="Email Address" class="mt-3">
+          <textarea class="mt-3" name="" id="" cols="20" rows="5" placeholder="Your Message...">
           </textarea>
-          <button type="button" class="btn btn-primary">SUBMIT</button>
+          <button class="mt-3" type="button" class="btn btn-primary">SUBMIT</button>
         </form>
       </div>
-      <div>
+      <div class="contact-info">
         <h3>How to reach us</h3>
         <p><i class="fas fa-mobile-alt"></i>046 88 33 663</p>
-        <p><i class="fas fa-inbox"></i>dk@claimsaus.com.au</p>
+        <p><i class="fas fa-inbox"></i> <a href="mailto:"> dk@claimsaus.com.au</a></p>
         <p><i class="fas fa-map-marker-alt"></i>6108/172 Edward Street, Brunswick East Vic 3057</p>
       </div>
 
@@ -213,13 +238,17 @@
   </div>
 
   <footer>
-    <img src="/img/logo.png" alt="">
-    <p>Copyright © Claims Management Australia. ACN 627 712 761 ABN 52627712761</p>
-    <i class="fab fa-linkedin-in"></i>
+    <div class="container">
+      <img src="/img/logo.png" alt="">
+      <p>Copyright © Claims Management Australia. ACN 627 712 761 ABN 52627712761</p>
+      <a href="linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i>
+      </a>
+    </div>
   </footer>
 
 
 
+  <script src="/js/script.js"></script>
 
 
 </body>
