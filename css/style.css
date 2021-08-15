@@ -392,6 +392,8 @@ footer {
   width: 100vw;
   bottom: 0;
   color: var(--clr-primary);
+  text-decoration: none;
+  list-style: none;
 }
 
 footer .container {
