@@ -1,3 +1,8 @@
+function dropNav() {
+  document.querySelector('.toggle').classList.remove('active');
+  document.querySelector('.navigation').classList.remove('active');
+}
+
 const toggle = document.querySelector('.toggle');
 const navigation = document.querySelector('.navigation');
 
@@ -6,12 +11,6 @@ toggle.addEventListener('click', () => {
   navigation.classList.toggle('active');
 })
 
-let link = document.getElementById('service-link');
 
-document.link.onclick = displayChange;
 
-function displayChange(e) {
-  console.log('hi');
-  navigation.style.display = "none";
 
-}

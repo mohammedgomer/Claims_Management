@@ -44,7 +44,6 @@ hr {
 .fas, .far {
   color: var(--clr-accent);
   display: flex;
-  margin-left: 3rem;
 }
 
 
@@ -58,8 +57,8 @@ hr {
 .toggle {
   position: fixed;
   top: 0;
-  right: 0;
-  width: 55px;
+  left: 0;
+  width: 50px;
   height: 95px;
   background: var(--clr-accent) url(../img/menu.png);
   background-size: 30px;
@@ -151,15 +150,6 @@ hr {
   transform: scale(0.5);
 }
 
-/* MEDIA QUERIES */
-/* DESKTOP SIZE & TABLET SIZE */
-
-@media(min-width: 40em) {
-.container {
-  margin-inline: auto;
-  width: min(90%, 70.5rem);
-}
-}
 
 
 /* HEADER SECTION */
@@ -208,10 +198,9 @@ color: #fff;
  grid-template-columns: repeat(2, 1fr);
  grid-template-rows: repeat(7, 1fr);
  gap: 1rem;
-margin: 0 auto;
 margin-top: 4rem;
+text-align: center;
 }
-
 .services h3 + p {
   text-align: center;
   margin-top: 1.5rem;
@@ -225,7 +214,7 @@ margin-top: 4rem;
 
 .intermediaries h3 + p {
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .intermediaries ul {
@@ -258,6 +247,7 @@ float: left;
 
 .about-director p {
   padding: 0 2rem;
+  margin-top: 2rem;
 }
 
 
@@ -400,7 +390,6 @@ footer {
   background-color: var(--clr-footer);
   margin-top: 13rem;
   width: 100vw;
-  height: 40vh;
   bottom: 0;
   color: var(--clr-primary);
 }
@@ -419,3 +408,81 @@ footer .fab {
 }
 
 
+
+/* MEDIA QUERIES */
+/* DESKTOP SIZE & TABLET SIZE */
+
+@media(min-width: 40em) {
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+header .office-img {
+  width: 100%;
+}
+
+.services {
+  margin-top: 1.5rem;
+}
+
+.services .grid {
+ grid-template-columns: repeat(3, 1fr);
+ grid-template-rows: repeat(5, 1fr);
+ justify-items: center;
+ margin-top: 5rem;
+ text-align: center;
+}
+
+.intermediaries ul {
+  padding: 0 10rem;
+}
+
+
+.fas, .far {
+  margin: 0;
+}
+.split {
+  display: flex;
+}
+
+.split > * {
+  flex-basis: 50%;
+  padding: 3rem;
+}
+
+.split h3 {
+  text-align: center;
+}
+
+.about-director img {
+width: 100%;
+border-radius: 50%;
+scale: 1;
+float: left;
+margin-bottom: 3rem;
+}
+
+.about-director h3 {
+ margin: 0;
+ margin-top: 1.2rem;
+}
+
+
+.testimonial-section {
+  margin: 0;
+}
+
+
+
+.contact-info h3 {
+  margin: 0;
+}
+
+.contact-info h3 + p {
+  margin-top: 3rem;
+}
+
+
+
+}
