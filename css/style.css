@@ -215,6 +215,7 @@ text-align: center;
 .intermediaries h3 + p {
   text-align: center;
   margin-top: 1.5rem;
+  font-weight: 400;
 }
 
 .intermediaries ul {
